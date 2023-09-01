@@ -1,10 +1,6 @@
 #landing {
     height: 100vh;
-    background: url('/pink-wall-compressed.png');
-    background: {
-        size: 100%;
-        position: center;
-    }
+    background: hotpink;
     display: flex;
     overflow: hidden;
     animation: backgroundAnimation 1s ease;
