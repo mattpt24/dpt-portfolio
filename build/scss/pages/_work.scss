@@ -1,0 +1,144 @@
+.work-page__wrapper {
+    min-height: 100vh;
+    background: url("/./assets/images/pink-wall.png");
+    background: {
+        size: cover!important;
+        position: center!important;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    @media screen and (max-width: $tablet) {
+        padding: 10rem 0 4rem 0;
+        background-size: 80%!important;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 8rem 0 2rem 0;
+        background-size: 80!important;
+    }
+
+
+    h1 {
+        color: white;
+        font-size: 900;
+        font-size: 4rem;
+        animation: columnEntrance 1s ease; 
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+        opacity: 0;
+        animation-delay: .5s;
+        font-family: $ff-main;
+
+        span {
+            color: $clr-primary;
+        }
+        @media screen and (max-width: $laptop) {
+            font-size: 3rem;
+        }
+    }
+
+
+
+
+
+    .work-categories__container {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 5rem;
+        margin-top: 4rem;
+        width: 100vw;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        .work-category {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &.col-1{
+                opacity: 0;
+                animation: columnEntrance 1s ease;
+                animation-fill-mode: forwards;
+                animation-delay: 1s;
+            }
+            &.col-2{
+                opacity: 0;
+                animation: columnEntrance 1s ease;
+                animation-fill-mode: forwards;
+                animation-delay: 1.25s;
+            }
+            &.col-3{
+                opacity: 0;
+                animation: columnEntrance 1s ease;
+                animation-fill-mode: forwards;
+                animation-delay: 1.5s;
+            }
+
+
+
+            img {
+                width: 450px;
+                height: 350px;
+                object: {
+                    fit: cover;
+                    position: center;
+                }
+                @media screen and (max-width: $mobile) {
+                    width: 95vw;
+                }
+            }
+
+            .category-name {
+                color: white;
+                font-weight: 900;
+                font-size: 2rem;
+                margin: 2rem 0 2rem 0;
+                @media screen and (max-width: $mobile) {
+                    margin: 1rem 0;
+                }
+            }
+
+            button {
+                transition: all .3s ease;
+                border-radius: 10px;
+                background: none;
+                color: #222;
+                padding: .5rem 1rem;
+                font-size: 1.2rem;
+                font-weight: 200;
+                border: none;
+                color: rgb(255, 255, 255);
+                border: solid 2px white;
+                outline: none;
+                cursor: pointer;
+                &:hover {
+                    transition: all .3s ease;
+                    background: white;
+                    color: #222;
+                    box-shadow: 0 0 10px white;
+                }
+            }
+        }
+    }
+
+}
+
+
+@keyframes columnEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

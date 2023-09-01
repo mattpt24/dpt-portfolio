@@ -1,0 +1,221 @@
+
+
+.poster-page__wrapper {
+    background: url("/assets/images/pink-wall.png");
+    background: {
+        size: 95%!important;
+        position: center!important;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+    h1 {
+        color: white;
+        font-size: 900;
+        font-size: 4rem;
+        animation: columnEntrance 1s ease;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+        opacity: 0;
+        animation-delay: .5s;
+        font-family: $ff-main;;
+        margin: 10rem 0 4rem 0;
+
+        span {
+            color: $clr-primary;
+        }
+    }
+
+
+.posters__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: #222;
+
+    @media screen and (max-width: $mobile) {
+        overflow: hidden;
+    }
+
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        flex-wrap: wrap;
+
+        li {
+            transition: all .4s ease;
+            width: 33.3333vw;
+            position: relative;
+            @media screen and (max-width: $tablet) {
+                width:50vw;
+            }
+            @media screen and (max-width: $mobile) {
+                width:100vw;
+                height: 350px;
+            }
+
+                img {
+                    transition: all .3s ease;
+                    // width: 450px;
+                    display: block;
+                    width: 100%;
+                    height: 600px;
+                    object-fit: cover;
+                    object-position: center;
+                    position: relative;
+                    z-index: 0;
+                }
+
+
+
+                .image-text {
+                    transition: all .4s ease;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.212);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: $ff-main;
+                    opacity: 0;
+                    pointer-events: none;
+                    @media screen and (max-width: $tablet) {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                    @media screen and (max-width: $mobile) {
+                        background: rgba(0, 0, 0, 0.512);
+                    }
+
+                    h3 {
+                        transition: all .4s ease;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        color: rgb(57, 57, 57);
+                        text-transform: uppercase;
+                        background: white;
+                        padding: .8rem;
+                        border-radius: 10px;
+
+                        &:hover {
+                            transition: all .4s ease;
+                            background: #222;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &:hover > .image-text {
+                    transition: all .4s ease;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+        }
+    }
+
+    ul:hover li {
+        transition: all .4s ease;
+        opacity: .2;
+    }
+
+    ul li:hover {
+        transition: all .4s ease;
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+}
+
+
+
+
+
+
+.poster-modal__container {
+    // transition: all .4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+
+
+    img {
+        height: 95vh;
+        width: 35vw;
+        object: {
+            position: center;
+            fit: cover;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: auto;
+            height: 80vh;
+        }
+        @media screen and (max-width: $tablet) {
+            width: auto;
+            height: 80vh;
+        }
+
+
+        &.horizontal-img  {
+            width: 60vw!important;
+            height: 90vh!important;
+            @media screen and (max-width: $tablet) {
+                width: 90vw!important;
+                height: 50vh!important;
+            }
+        }
+    }
+
+    .close-poster-modal {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 999;
+        @media screen and (max-width: $mobile) {
+            top: 1rem;
+            right: 1rem;
+        }
+        i {
+            transition: all .3s ease;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+            &:hover {
+                transition: all .3s ease;
+                color: $clr-primary;
+            }
+        }
+    }
+}
+
+
+.poster-modal{
+    // transition: all .4s ease;
+    opacity: 1;
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

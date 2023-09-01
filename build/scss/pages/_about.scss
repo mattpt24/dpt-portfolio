@@ -1,0 +1,139 @@
+.about-text{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    padding: 3rem 2rem 2rem 2rem;
+    border: solid 2px rgba(255, 255, 255, 0.556);
+    opacity: 0;
+    animation:aboutEntrance .5s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    @media screen and (max-width: $tablet) {
+        backdrop-filter: blur(15px);
+        border: none;
+    }
+
+    .about-title {
+    font-size: 3.2rem;
+    color: white;
+    @media screen and (max-width: $laptop) {
+        font-size: 2.4rem;
+    }
+
+    span {
+        opacity: .4;
+    }
+}
+
+.about-subtitle {
+    color: white;
+    font-size: 1.3rem;
+    opacity: .5;
+    width: 50ch;
+    margin: .5rem auto 1rem auto;
+    @media screen and (max-width: $laptop) {
+        font-size: 1rem;
+    }
+    @media screen and (max-width: $tablet) {
+        font-size: 1.2rem;
+    }
+    @media screen and (max-width:$mobile) {
+        width: 90vw;
+        font-size: 1rem;
+    }
+}
+
+h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .4rem;;
+    color: white;
+    margin-bottom: 1rem;
+    @media screen and (max-width: $laptop) {
+        font-size: .8rem;
+    }
+}
+
+
+.adobe-logos__container {
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 2rem 0;
+    @media screen and (max-width: $tablet) {
+        justify-content: center;
+    }
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        object: {
+            fit: cover;
+            position: center;
+        }
+        @media screen and (max-width: $laptop) {
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    img:nth-child(1) {
+        opacity: 0;
+        animation: iconsEntrance .5s ease;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+    }
+    img:nth-child(2) {
+        opacity: 0;
+        animation: iconsEntrance .5s ease;
+        animation-delay: 1.4s;
+        animation-fill-mode: forwards;
+    }
+    img:nth-child(3) {
+        opacity: 0;
+        animation: iconsEntrance .5s ease;
+        animation-delay: 1.6s;
+        animation-fill-mode: forwards;
+    }
+    img:nth-child(4) {
+        opacity: 0;
+        animation: iconsEntrance .5s ease;
+        animation-delay: 1.8s;
+        animation-fill-mode: forwards;
+    }
+    img:nth-child(5) {
+        opacity: 0;
+        animation: iconsEntrance .5s ease;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+
+}
+
+
+
+
+
+@keyframes aboutEntrance {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+
+@keyframes iconsEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
