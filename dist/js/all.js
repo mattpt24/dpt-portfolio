@@ -28,7 +28,13 @@ function change() {
 var contactContainer = document.querySelector(".contact-btn__container");
 var contactContainerIcon = document.querySelector(".contact-btn__container i");
 var contactModalLinks = document.querySelector(".contact-modal__container");
+var closeContactModal = document.querySelector(".close-contact-modal");
 contactContainer.addEventListener("click", function () {
+  contactContainer.classList.toggle("contact--toggled");
+  contactContainerIcon.classList.toggle("contact-icon--toggled");
+  contactModalLinks.classList.toggle("contact-links--toggled");
+});
+closeContactModal.addEventListener("click", function () {
   contactContainer.classList.toggle("contact--toggled");
   contactContainerIcon.classList.toggle("contact-icon--toggled");
   contactModalLinks.classList.toggle("contact-links--toggled");
