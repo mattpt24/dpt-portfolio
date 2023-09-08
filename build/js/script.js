@@ -1,3 +1,7 @@
+
+
+
+
 const openPosterModal = Array.from(document.querySelectorAll(".image-text"));
 const posterModal = Array.from(document.querySelectorAll(".poster-modal__container"));
 const closePosterModal = Array.from(document.querySelectorAll(".close-poster-modal"));
@@ -52,3 +56,21 @@ closeContactModal.addEventListener("click", () => {
 });
 
 
+
+
+
+
+
+const openBrandingModal = Array.from(document.querySelectorAll(".brand ul li"));
+const closeBrandingModal = Array.from(document.querySelectorAll(".close-branding-modal"));
+const brandingModal = Array.from(document.querySelectorAll(".logos-branding__modal"));
+
+
+for(let i = 0; i <= openBrandingModal.length; i++) {
+    openBrandingModal[i].addEventListener("click", () => {
+        brandingModal[i].classList.add("logos-branding-modal--activated");
+    });
+    brandingModal[i].addEventListener("click", () => {
+        brandingModal[i].classList.remove("logos-branding-modal--activated");
+    });
+}

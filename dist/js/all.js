@@ -39,3 +39,17 @@ closeContactModal.addEventListener("click", function () {
   contactContainerIcon.classList.toggle("contact-icon--toggled");
   contactModalLinks.classList.toggle("contact-links--toggled");
 });
+var openBrandingModal = Array.from(document.querySelectorAll(".brand ul li"));
+var closeBrandingModal = Array.from(document.querySelectorAll(".close-branding-modal"));
+var brandingModal = Array.from(document.querySelectorAll(".logos-branding__modal"));
+var _loop2 = function _loop2(_i) {
+  openBrandingModal[_i].addEventListener("click", function () {
+    brandingModal[_i].classList.add("logos-branding-modal--activated");
+  });
+  brandingModal[_i].addEventListener("click", function () {
+    brandingModal[_i].classList.remove("logos-branding-modal--activated");
+  });
+};
+for (var _i = 0; _i <= openBrandingModal.length; _i++) {
+  _loop2(_i);
+}
