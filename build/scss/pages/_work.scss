@@ -70,6 +70,11 @@
                 animation: columnEntrance 1s ease;
                 animation-fill-mode: forwards;
                 animation-delay: 1.25s;
+                pointer-events: none;
+                position: relative;
+                img{opacity: .3;}
+                .category-name{opacity: .3;}
+                a{opacity: .3;}
             }
             &.col-3{
                 opacity: 0;
@@ -79,16 +84,40 @@
             }
 
 
+        
+            .coming-soon {
+                position: absolute;
+                top: 30%;
+                left: 25%;
+                padding: .5rem;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.705);
+                color: #222222f4;
+                transform: rotate(15deg);
+                font-size: 2rem;
+                font-weight: 900;
+                opacity: 1!important;
+                @media screen and (max-width: $tablet) {
+                    left: 36%;
+                }
+                @media screen and (max-width: $mobile) {
+                    left: 20%;
+                    top: 40%;
+                    z-index: 1;
+                }
+            }
+
 
             img {
                 width: 450px;
-                height: 350px;
+                height: 300px;
                 object: {
                     fit: cover;
                     position: center;
                 }
                 @media screen and (max-width: $mobile) {
-                    width: 95vw;
+                    width: 90vw;
+                    height: 200px;
                 }
             }
 
@@ -135,6 +164,18 @@
     }
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes columnEntranceFaded {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: .3;
         transform: translateY(0);
     }
 }
